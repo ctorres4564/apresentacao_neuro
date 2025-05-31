@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuroanatomia - Apresentação Interativa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Navigation Header -->
+        <header class="nav-header">
+            <div class="nav-content">
+                <h1 class="nav-title">Neuroanatomia</h1>
+                <div class="nav-controls">
+                    <button class="btn btn--outline btn--sm" onclick="showOverview()">Visão Geral</button>
+                    <div class="progress-indicator">
+                        <span id="slide-counter">1 / 13</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Presentation Area -->
+        <main class="presentation-main">
+            <!-- Title Slide -->
+            <section class="slide active" id="slide-0">
+                <div class="slide-content title-slide">
+                    <h1>NEUROANATOMIA</h1>
+                    <h2>Explicação Detalhada dos Tópicos Principais</h2>
+                    <div class="title-description">
+                        <p>Uma apresentação interativa cobrindo os aspectos fundamentais da neuroanatomia, desde a estrutura básica do sistema nervoso até as aplicações clínicas modernas.</p>
+                    </div>
+                    <div class="title-actions">
+                        <button class="btn btn--primary btn--lg" onclick="nextSlide()">Começar Apresentação</button>
+                        <button class="btn btn--secondary btn--lg" onclick="showOverview()">Ver Tópicos</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Overview Slide -->
+            <section class="slide" id="slide-overview">
+                <div class="slide-content overview-slide">
+                    <h2>Tópicos da Apresentação</h2>
+                    <div class="topics-grid">
+                        <div class="topic-card" onclick="goToSlide(1)">
+                            <div class="topic-number">1</div>
+                            <h3>O que é Neuroanatomia?</h3>
+                            <p>Introdução ao estudo da estrutura do sistema nervoso</p>
+                        </div>
+                        <div class="topic-card" onclick="goToSlide(2)">
+                            <div class="topic-number">2</div>
+                            <h3>Divisões do Sistema Nervoso</h3>
+                            <p>Classificação anatômica e funcional</p>
+                        </div>
+                        <div class="topic-card" onclick="goToSlide(3)">
+                            <div class="topic-number">3</div>
+                            <h3>Células do Sistema Nervoso</h3>
+                            <p>Neurônios e células da glia</p>
+                        </div>
+                        <div class="topic-card" onclick="goToSlide(4)">
+                            <div class="topic-number">4</div>
+                            <h3>Encéfalo: Partes e Funções</h3>
+                            <p>Estruturas cerebrais e suas funções</p>
+                        </div>
+                        <div class="topic-card" onclick="goToSlide(5)">
+                            <div class="topic-number">5</div>
+                            <h3>Medula Espinhal</h3>
+                            <p>Conexão entre cérebro e corpo</p>
+                        </div>
+                        <div class="topic-card" onclick="goToSlide(6)">
+                            <div class="topic-number">6</div>
+                            <h3>Meninges e Líquido Cerebrospinal</h3>
+                            <p>Proteção e nutrição do SNC</p>
+                        </div>
+                        <div class="topic-card" onclick="goToSlide(7)">
+                            <div class="topic-number">7</div>
+                            <h3>Sistema Ventricular</h3>
+                            <p>Cavidades e circulação do LCR</p>
+                        </div>
+                        <div class="topic-card" onclick="goToSlide(8)">
+                            <div class="topic-number">8</div>
+                            <h3>Corpos e Vias Nervosas</h3>
+                            <p>Conexões e tratos neurais</p>
+                        </div>
+                        <div class="topic-card" onclick="goToSlide(9)">
+                            <div class="topic-number">9</div>
+                            <h3>Nervos Cranianos</h3>
+                            <p>12 pares de nervos do encéfalo</p>
+                        </div>
+                        <div class="topic-card" onclick="goToSlide(10)">
+                            <div class="topic-number">10</div>
+                            <h3>Plasticidade Neural</h3>
+                            <p>Capacidade de reorganização cerebral</p>
+                        </div>
+                        <div class="topic-card" onclick="goToSlide(11)">
+                            <div class="topic-number">11</div>
+                            <h3>Neuroimagem</h3>
+                            <p>Ferramentas de visualização</p>
+                        </div>
+                        <div class="topic-card" onclick="goToSlide(12)">
+                            <div class="topic-number">12</div>
+                            <h3>Doenças Relacionadas</h3>
+                            <p>Patologias neuroanatômicas</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Topic Slides -->
+            <section class="slide" id="slide-1">
+                <div class="slide-content topic-slide">
+                    <h2>O que é Neuroanatomia?</h2>
+                    <div class="topic-content">
+                        <div class="content-points">
+                            <ul>
+                                <li>Ramo da anatomia que estuda a estrutura do sistema nervoso</li>
+                                <li>Analisa a organização e as conexões dos neurônios e das regiões cerebrais</li>
+                                <li>Base para entender funções motoras, sensoriais, cognitivas e emocionais</li>
+                                <li>Fundamental para compreensão do funcionamento do corpo humano</li>
+                            </ul>
+                        </div>
+                        <div class="topic-image">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1748724059/pplx_project_search_images/1535b3493544a3e1c3c59fdeacecbc7ff1aefcca.jpg" alt="Anatomia do Cérebro" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide" id="slide-2">
+                <div class="slide-content topic-slide">
+                    <h2>Divisões do Sistema Nervoso</h2>
+                    <div class="topic-content">
+                        <div class="content-points">
+                            <div class="division-section">
+                                <h3>Divisão Anatômica:</h3>
+                                <ul>
+                                    <li><strong>Sistema Nervoso Central (SNC):</strong> encéfalo e medula espinhal</li>
+                                    <li><strong>Sistema Nervoso Periférico (SNP):</strong> nervos cranianos e espinhais, gânglios</li>
+                                </ul>
+                            </div>
+                            <div class="division-section">
+                                <h3>Divisão Funcional:</h3>
+                                <ul>
+                                    <li><strong>Sistema Nervoso Somático:</strong> movimentos voluntários e estímulos sensoriais</li>
+                                    <li><strong>Sistema Nervoso Autônomo (SNA):</strong> funções involuntárias
+                                        <ul class="sub-list">
+                                            <li>Simpático (luta ou fuga)</li>
+                                            <li>Parassimpático (descanso e digestão)</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide" id="slide-3">
+                <div class="slide-content topic-slide">
+                    <h2>Células do Sistema Nervoso</h2>
+                    <div class="topic-content">
+                        <div class="content-points">
+                            <div class="cell-section">
+                                <h3>Neurônios: conduzem impulsos nervosos</h3>
+                                <ul>
+                                    <li>Dendritos (recebem sinais)</li>
+                                    <li>Corpo celular (soma)</li>
+                                    <li>Axônio (transmite sinais)</li>
+                                </ul>
+                            </div>
+                            <div class="cell-section">
+                                <h3>Células da glia:</h3>
+                                <ul>
+                                    <li>Astrócitos (nutrição, barreira hematoencefálica)</li>
+                                    <li>Oligodendrócitos (mielinização no SNC)</li>
+                                    <li>Células de Schwann (mielinização no SNP)</li>
+                                    <li>Micróglias (defesa imunológica)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="topic-image">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1748724059/pplx_project_search_images/bdec5e2229e74670a0d50bf8060567abe0bb15c1.jpg" alt="Células Neuronais e Gliais" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide" id="slide-4">
+                <div class="slide-content topic-slide">
+                    <h2>Encéfalo: Partes e Funções</h2>
+                    <div class="topic-content">
+                        <div class="content-points">
+                            <div class="brain-section">
+                                <h3>Cérebro: dividido em hemisférios direito e esquerdo</h3>
+                                <h4>Lóbulos cerebrais:</h4>
+                                <ul>
+                                    <li><strong>Frontal:</strong> planejamento, movimento, linguagem, personalidade</li>
+                                    <li><strong>Parietal:</strong> percepção sensorial, espacial e tátil</li>
+                                    <li><strong>Temporal:</strong> audição, memória, linguagem</li>
+                                    <li><strong>Occipital:</strong> visão</li>
+                                </ul>
+                            </div>
+                            <div class="brain-section">
+                                <h3>Tronco encefálico: mesencéfalo, ponte e bulbo</h3>
+                                <ul>
+                                    <li>Regula funções vitais: respiração, batimentos cardíacos</li>
+                                </ul>
+                                <h3>Cerebelo:</h3>
+                                <ul>
+                                    <li>Coordena equilíbrio, postura e precisão dos movimentos</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide" id="slide-5">
+                <div class="slide-content topic-slide">
+                    <h2>Medula Espinhal</h2>
+                    <div class="topic-content">
+                        <div class="content-points">
+                            <ul>
+                                <li>Canal nervoso protegido pela coluna vertebral</li>
+                                <li><strong>Função:</strong> transmitir sinais entre o cérebro e o corpo</li>
+                                <li>Apresenta nervos espinhais que saem em pares de cada vértebra</li>
+                                <li>Ponto de conexão entre SNC e SNP</li>
+                                <li>Contém vias ascendentes (sensoriais) e descendentes (motoras)</li>
+                                <li>Reflexos medulares permitem respostas rápidas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide" id="slide-6">
+                <div class="slide-content topic-slide">
+                    <h2>Meninges e Líquido Cerebrospinal</h2>
+                    <div class="topic-content">
+                        <div class="content-points">
+                            <div class="meninges-section">
+                                <h3>Meninges: membranas que envolvem o cérebro e medula espinhal</h3>
+                                <ul>
+                                    <li>Duramáter (externa)</li>
+                                    <li>Aracnoide (média)</li>
+                                    <li>Piamáter (interna)</li>
+                                </ul>
+                            </div>
+                            <div class="csf-section">
+                                <h3>Líquido cerebrospinal (LCR):</h3>
+                                <ul>
+                                    <li>Protege o SNC contra impactos</li>
+                                    <li>Nutre o tecido nervoso</li>
+                                    <li>Remove resíduos metabólicos</li>
+                                    <li>Mantém pressão intracraniana adequada</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide" id="slide-7">
+                <div class="slide-content topic-slide">
+                    <h2>Sistema Ventricular</h2>
+                    <div class="topic-content">
+                        <div class="content-points">
+                            <ul>
+                                <li>Conjunto de cavidades no encéfalo</li>
+                                <li>Por onde circula o líquido cerebrospinal</li>
+                            </ul>
+                            <div class="ventricles-section">
+                                <h3>Composto por:</h3>
+                                <ul>
+                                    <li>Dois ventrículos laterais</li>
+                                    <li>Terceiro ventrículo</li>
+                                    <li>Quarto ventrículo</li>
+                                </ul>
+                            </div>
+                            <ul>
+                                <li>Conectados por forames e aqueduto cerebral</li>
+                                <li>Produção do LCR pelos plexos coroides</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide" id="slide-8">
+                <div class="slide-content topic-slide">
+                    <h2>Corpos e Vias Nervosas</h2>
+                    <div class="topic-content">
+                        <div class="content-points">
+                            <ul>
+                                <li><strong>Corpo caloso:</strong> conecta os hemisférios cerebrais</li>
+                                <li><strong>Fascículos:</strong> feixes de axônios conectando regiões específicas</li>
+                            </ul>
+                            <div class="tracts-section">
+                                <h3>Tratos da medula espinal:</h3>
+                                <ul>
+                                    <li><strong>Ascendentes (sensoriais):</strong> levam informações ao cérebro</li>
+                                    <li><strong>Descendentes (motores):</strong> trazem comandos do cérebro</li>
+                                </ul>
+                            </div>
+                            <ul>
+                                <li><strong>Comissuras:</strong> conectam estruturas homólogas</li>
+                                <li><strong>Cápsulas:</strong> contêm fibras de associação</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide" id="slide-9">
+                <div class="slide-content topic-slide">
+                    <h2>Nervos Cranianos</h2>
+                    <div class="topic-content">
+                        <div class="content-points">
+                            <ul>
+                                <li>12 pares que saem do encéfalo</li>
+                                <li>Controlam sentidos e funções motoras da cabeça e pescoço</li>
+                            </ul>
+                            <div class="cranial-nerves">
+                                <h3>Principais nervos:</h3>
+                                <ul>
+                                    <li><strong>I - Olfatório</strong> (olfato)</li>
+                                    <li><strong>II - Óptico</strong> (visão)</li>
+                                    <li><strong>III - Oculomotor</strong> (movimento dos olhos)</li>
+                                    <li><strong>V - Trigêmeo</strong> (sensibilidade facial)</li>
+                                    <li><strong>VII - Facial</strong> (músculos da face)</li>
+                                    <li><strong>VIII - Vestibulococlear</strong> (audição e equilíbrio)</li>
+                                    <li><strong>X - Vago</strong> (vísceras torácicas e abdominais)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="topic-image">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1748724059/pplx_project_search_images/404907723122bd694b2c80b0ae0a2b60f719826d.jpg" alt="12 Nervos Cranianos" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide" id="slide-10">
+                <div class="slide-content topic-slide">
+                    <h2>Plasticidade Neural</h2>
+                    <div class="topic-content">
+                        <div class="content-points">
+                            <ul>
+                                <li>Capacidade do cérebro de se reorganizar</li>
+                                <li>Formação de novas conexões após lesões</li>
+                                <li>Adaptação em resposta à aprendizagem</li>
+                            </ul>
+                            <div class="plasticity-types">
+                                <h3>Tipos de plasticidade:</h3>
+                                <ul>
+                                    <li><strong>Sináptica:</strong> modificação das sinapses</li>
+                                    <li><strong>Estrutural:</strong> crescimento de novos dendritos</li>
+                                    <li><strong>Funcional:</strong> reorganização de circuitos</li>
+                                </ul>
+                            </div>
+                            <ul>
+                                <li>Fundamental para recuperação e aprendizado</li>
+                                <li>Ocorre durante toda a vida</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide" id="slide-11">
+                <div class="slide-content topic-slide">
+                    <h2>Neuroimagem</h2>
+                    <div class="topic-content">
+                        <div class="content-points">
+                            <ul>
+                                <li>Ferramentas para visualizar o sistema nervoso</li>
+                            </ul>
+                            <div class="imaging-methods">
+                                <h3>Métodos principais:</h3>
+                                <ul>
+                                    <li><strong>Ressonância Magnética (RM):</strong> alta resolução anatômica</li>
+                                    <li><strong>Tomografia Computadorizada (TC):</strong> rápida, boa para emergências</li>
+                                    <li><strong>PET scan:</strong> metabolismo cerebral</li>
+                                    <li><strong>fMRI:</strong> atividade cerebral em tempo real</li>
+                                    <li><strong>DTI:</strong> visualização de tratos de substância branca</li>
+                                </ul>
+                            </div>
+                            <ul>
+                                <li>Essenciais para diagnóstico e pesquisa</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide" id="slide-12">
+                <div class="slide-content topic-slide">
+                    <h2>Doenças Relacionadas à Neuroanatomia</h2>
+                    <div class="topic-content">
+                        <div class="content-points">
+                            <div class="disease-section">
+                                <h3>AVC (Acidente Vascular Cerebral):</h3>
+                                <ul>
+                                    <li>Interrupção do fluxo sanguíneo cerebral</li>
+                                </ul>
+                            </div>
+                            <div class="disease-section">
+                                <h3>Esclerose Múltipla:</h3>
+                                <ul>
+                                    <li>Perda da bainha de mielina</li>
+                                </ul>
+                            </div>
+                            <div class="disease-section">
+                                <h3>Doença de Parkinson:</h3>
+                                <ul>
+                                    <li>Degeneração dos neurônios dopaminérgicos</li>
+                                </ul>
+                            </div>
+                            <div class="disease-section">
+                                <h3>Doença de Alzheimer:</h3>
+                                <ul>
+                                    <li>Perda de sinapses e morte neuronal progressiva</li>
+                                </ul>
+                            </div>
+                            <ul>
+                                <li><strong>Cada doença afeta estruturas específicas do sistema nervoso</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Navigation Controls -->
+        <footer class="nav-footer">
+            <div class="nav-controls-bottom">
+                <button class="btn btn--secondary" onclick="prevSlide()" id="prev-btn">
+                    ← Anterior
+                </button>
+                <button class="btn btn--outline" onclick="goToSlide(0)">
+                    🏠 Início
+                </button>
+                <button class="btn btn--primary" onclick="nextSlide()" id="next-btn">
+                    Próximo →
+                </button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
